@@ -1,0 +1,13 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    restart: always
+    ports:
+      - 9000:9000
+    volumes:
+      - /Users/proff/Database/database.db:/database.db:rw
+    environment:
+      - DATABASE=/database.db
+    
+
