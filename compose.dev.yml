@@ -1,0 +1,19 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    restart: always
+    ports:
+      - 8000:9000
+    volumes:
+      - /Users/proff/Database/database.db:/database.db:rw
+    environment:
+      - PORT=9000
+      - DATABASE=/database.db
+      - BACKUP_SCRIPT=backup.sh
+      - NEXTCLOUD_URL=
+      - NEXTCLOUD_USERID=
+      - NEXTCLOUD_USER=
+      - NEXTCLOUD_PASSWORD=
+    
+
